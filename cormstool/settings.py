@@ -49,13 +49,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include("home.urls")),
-    # Added Following Two Lines Of Code
-    url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
-]
 ROOT_URLCONF = 'cormstool.urls'
 
 TEMPLATES = [

@@ -1,13 +1,12 @@
-# import nltk
+import nltk
 # from nltk.tokenize import word_tokenize
-# nltk.download('omw-1.4')
+nltk.download('omw-1.4')
 from nltk.stem import WordNetLemmatizer
 # from nltk.stem import PorterStemmer
 import gensim
 import string
 from gensim.parsing.preprocessing import STOPWORDS
-# nltk.download('punkt')
-# nltk.download('punkt')
+nltk.download('punkt')
 all_stopwords = gensim.parsing.preprocessing.STOPWORDS
 all_stopwords_gensim = STOPWORDS.union(set([
 'add','insert','update','delete','remove','fix','modify','updating','inserting',
@@ -15,7 +14,7 @@ all_stopwords_gensim = STOPWORDS.union(set([
 'updates','updated','changes','adding',"''","``",'release','allow','[',']','//',
 'bump','build','@','use','docs','`','/','support','ref','added','view','test','data']))
 # ps = PorterStemmer()
-# nltk.download('wordnet')
+nltk.download('wordnet')
 def text_cleaning(a):
  a = a.lower()
  lemmatizer = WordNetLemmatizer()

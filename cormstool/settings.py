@@ -24,7 +24,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 SECRET_KEY = 'django-insecure-m#xgjfc8qdapj_lkrvzi7v5h5%ffu9a-4q8%dlt!hxt*z)xa-c'
 SETTINGS_PATH = os.path.normpath(os.path.dirname(__file__))
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
  
 ALLOWED_HOSTS = ['127.0.0.1', 'cormstool.herokuapp.com']
 

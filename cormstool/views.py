@@ -18,13 +18,13 @@ def upload(request):
         upload = request.FILES['upload']
         project = request.POST["projects"]
         platform = request.POST["platform"]
-        ls,platform,project = corms.main_controller(upload,project,platform)
+        ls,platform,project,inrev = corms.main_controller(upload,project,platform)
         # return HttpResponse(
         # "<h1>CORMSTOOL</h1> <p>results: {0}".format(ls))
         # fss = FileSystemStorage()
         # file = fss.save(upload.name, upload)
         # file_url = fss.url(file)
-        return render(request, 'upload.html', {'results': ls,'platform':platform,'project':project})
+        return render(request, 'upload.html', {'results': ls,'platform':platform,'project':project,'inactive':inrev})
     return render(request, 'upload.html')
 
 def home(request):

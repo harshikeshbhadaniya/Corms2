@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+
     <style>
       body{
         font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
@@ -38,7 +42,9 @@ input.invalid {
 .tab {
   display: none;
 }
-
+h1{
+  font-weight: 600;
+}
 /* Make circles that indicate the steps of the form: */
 .step {
   height: 15px;
@@ -55,7 +61,25 @@ input.invalid {
 .step.active {
   opacity: 1;
 }
-
+form,.dataTables_wrapper{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.dataTables_wrapper{
+  margin-top: 1rem;
+  background: #fff;
+  padding:10px;
+}
+.new{ 
+  border: 0; 
+  height: 1vh; 
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+}
+/* .newline { 
+  border: 1px solid #8c8b8b; 
+}  */
 /* Mark the steps that are finished and valid: */
 .step.finish {
   background-color: #04AA6D;
@@ -97,7 +121,7 @@ input.invalid {
     </div>
   </nav>
   
-        <div class="container">
+        <!-- <div class="container"> -->
           <div class="jumbotron">
             <h1 class="display-6">CORMS: A GitHub and Gerrit based Hybrid Code Reviewer
               Recommendation Approach for Modern Code Review</h1>
@@ -112,7 +136,7 @@ input.invalid {
               Reciprocal Rank (MRR) of 45.1%, 67.5%, 74.6%, 79.9% and 0.58 for
               the 20 projects, consequently improves the RevFinder approach by
               44.9%, 34.4%, 20.8%, 12.3% and 18.4%, respectively.</p>
-            <hr class="my-4">
+            <!-- <hr class="my-4 new"> -->
             
   <form id="regForm" method="post" enctype="multipart/form-data">
     {% csrf_token %}
@@ -120,17 +144,17 @@ input.invalid {
   <!-- One "tab" for each step in the form: -->
   <div class="tab">
     <h3>Step 1/3: Select Platform</h3>
-    <hr>
+    <hr class="newline">
     <p>Currently we are providing recommendations based on Gerrit</p>
     <input style="width:5%" type="radio" id="gerrit" checked name="platform" value="gerrit">
 <label for="gerrit">Gerrit</label>
-<input style="width:5%" type="radio" id="github" name="platform" disabled value="github">
+<input style="width:5%" type="radio" id="github" name="platform" value="github">
 <label for="github">GitHub</label>
   </div> 
   
   <div class="tab">
     <h3>Step 2/3: Select Project</h3>
-    <hr>
+    <hr class="newline">
     <p>Currently we are providing recommendations based on following projects: </p>
     <label for="projects">Choose project:</label>
     <select name="projects" id="projects">
@@ -140,14 +164,14 @@ input.invalid {
   
   <div class="tab">
     <h3>Step 3/3: Upload JSON file</h3>
-    <hr>
+    <hr class="newline">
     <p><b>Format</b>: {"author": "author_id",
       "project": "project/suproject information",
       "files":[{"path":"file-path 1 info"},{"path":"file-path 2 info"}],
       "subject":"subject of the change information"
       }</p>
       
-            <input style="width:50%" type="file" name="upload" accept=".doc, .docx, .pdf, .txt">
+            <input style="width:50%" type="file" name="upload" accept=".JSON, .json">
     <!-- <input style="width:5%" type="radio" id="yes" onclick="handleClick(this);" name="manual" value="yes" oninput="this.className = ''">
 <label for="yes">Yes</label>
 <input style="width:5%" type="radio" id="no" name="manual" checked value="no" oninput="this.className = ''">
@@ -172,19 +196,23 @@ input.invalid {
   
   </form> 
           
-          <hr class="my-4">
+          <hr class="my-4 new">
           <!--See File Uploaded-->
-          <h3 class="my-4">Results</h3>
+          <h1 class="display-6">RESULTS</h1>
             {% if results %}
-            <p><b>CORMS</b> predicted the following Top-10 reviewers for your review based on our 
-              collected data from <b>{{ platform }}</b> <b>{{ project }}</b> project.</p>
-            <table id="example" class="display" style="width:100%">
+            <h4 class="my-4"><b>CORMS</b> predicted the following Top-10 reviewers for your review based on 
+              the data collected from <b style="text-transform: uppercase;">{{ platform }} {{ project }}</b> project.</h4>
+              <h5>(Our models are trained based on the datasets collected in <b>December,2021</b>)</h5>
+            <table id="table1" class="display" style="width:100%">
               <thead>
                   <tr>
-                      <th>ID</th>
-                      <th>NAME</th>
-                      <th>Registered Date</th>
-                      <th>EMAIL</th>
+                      <th>No</th>
+                      <th>Score</th>
+                      <th>Reviewer_ID</th>
+                      <th>Name</th>
+                      <th>Last Reviewed</th>
+                      <th>Ongoing Reviews</th>
+                      <!-- <th>EMAIL</th> -->
                   </tr>
               </thead>
               <tbody>
@@ -195,21 +223,74 @@ input.invalid {
                   <td>{{ data }}</td>
                   {% endfor %}
             </tr>
-                {% endfor %}
+                {% endfor %}           
+
                 </tbody></table>
+                {% else %}
+                <p class="my-4">No code reviews added.</p>
+                {% endif %}
               <!-- <a class="btn btn-primary my-4" href="/">Return to Homepage</a> -->
+              <hr class="my-4 new">
+              <h1 class="display-6">FILTERS</h1>
+              {% if inactive %}
+              <h4>We removed following <b style="color:red">inactive reviewers</b> from our results</h4>
+              <table id="table2" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Score</th>
+                        <th>Reviewer_ID</th>
+                        <th>Name</th>
+                        <th>Last Reviewed</th>
+                        <th>Ongoing Reviews</th>
+                        <!-- <th>EMAIL</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                  {% for key in inactive %}
+                  <tr>
+                    {% for data in key %}
+                    <td>{{ data }}</td>
+                    {% endfor %}
+              </tr>
+                  {% endfor %}           
+  
+                  </tbody></table>
             {% else %}
-            <p class="my-4">No code reviews added.</p>
+            <p class="my-4">No inactive reviewers found.</p>
             {% endif %}
-          
 
         </div>
-        </div>
+        <!-- </div> -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
-        <script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+        
+        
+       <script>
            $(document).ready(function() {
-    $('#example').DataTable({"ordering": false});
+    $('#table1').DataTable({"ordering": true,"lengthChange":false,"searching": true,"info": false,
+    "paging":true,
+    dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ],
+        
+  });
+    $('#table2').DataTable({"ordering": true,"lengthChange":true,"searching": true,"info": true,
+    "paging":true
+    // dom: 'Bfrtip',
+        // buttons: [
+        //     'copy', 'csv', 'excel', 'pdf', 'print'
+        // ]
+  });
 } );
 
 function getType() {
@@ -218,7 +299,7 @@ function getType() {
   if (x) {
     items = ["openstack","android","qt","libreoffice","cloudera","chromium","opencord","go","eclipse"];
   } else {
-    items = []
+    items = ["nodejs","shopify","joyent","twbs","bssw","nixcommunity","h5bp","fullstorydev","getsentry","renovatebot"]
   }
   var str = ""
   for (var item of items) {

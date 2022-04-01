@@ -76,10 +76,10 @@ def measure(df,author,project,new_files):
             reviewer_lcsubstr[r]=reviewer_lcsubstr[r]+mxs
     
         i = i+1
-    # normalization.normalize_in_place(reviewer_lcp)
-    # normalization.normalize_in_place(reviewer_lcs)
-    # normalization.normalize_in_place(reviewer_lcsubseq)
-    # normalization.normalize_in_place(reviewer_lcsubstr)
+    normalization.normalize_in_place(reviewer_lcp)
+    normalization.normalize_in_place(reviewer_lcs)
+    normalization.normalize_in_place(reviewer_lcsubseq)
+    normalization.normalize_in_place(reviewer_lcsubstr)
     
     final_score = dict()
     # for key in rev_act:

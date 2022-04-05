@@ -1,0 +1,118 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+
+    <style>
+      /* body{
+        font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace; */
+      /* } */
+    .panel-heading .colpsible-panel:after {
+    font-family: 'Glyphicons Halflings';
+    content: "\e114";   
+    float: right;       
+    color: #408080;        
+    }
+    .panel-heading .colpsible-panel.collapsed:after {
+    content: "\e080";
+    }
+    .jumbotron{
+      margin-bottom:0;
+    }
+    body{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    #regForm ,#feedbackForm{
+    background-color: #ffffff;
+    padding: 40px;
+    width: 100%;
+    min-width: 300px;
+    }
+
+    /* Style the input fields */
+    input {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+    }
+
+    /* Mark input boxes that gets an error on validation: */
+    input.invalid {
+    background-color: #ffdddd;
+    }
+
+    /* Hide all steps by default: */
+    .tab {
+    display: none;
+    }
+    h1{
+    font-weight: 600;
+    }
+    /* Make circles that indicate the steps of the form: */
+    .step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+    }
+
+    /* Mark the active step: */
+    .step.active {
+    opacity: 1;
+    }
+    form,.dataTables_wrapper{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .dataTables_wrapper{
+    margin-top: 1rem;
+    background: #fff;
+    padding:10px;
+    }
+    .new{ 
+    border: 0; 
+    height: 1vh; 
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+    }
+    /* .newline { 
+    border: 1px solid #8c8b8b; 
+    }  */
+    /* Mark the steps that are finished and valid: */
+    .step.finish {
+    background-color: #04AA6D;
+    }
+    .btn-my{
+      background-color: #ffffff;
+      padding: 20px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      margin-top:1em;
+    }
+    .btn-my:before {
+      content: "\2193";
+    }
+    .btn-my:before {
+        float: right;
+        font-weight: bold;
+        font-size: 15px;
+        margin: 0 -1.1em 0 0;
+        padding-right:1vw;
+        pointer-events: none;
+        text-align: center;
+        width: 2em;
+    }
+    </style>
+    <title>CORMS</title>
+</head>

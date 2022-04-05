@@ -1,39 +1,45 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import cormstool.corms.corms_openstack as corms
-from django.core.files.storage import FileSystemStorage
-
-def geeks_view(request):
-    # create a dictionary to pass
-    # data to the template
-    context ={
-        "data":"Gfg is the best",
-        "list":[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    }
-    # return response with template and context
-    return render(request, "geeks.html", context)
+import cormstool.corms.feedback as feedback
+import os
+import mimetypes
 
 def upload(request):
-    if request.method == 'POST' and request.FILES['upload']:
-        upload = request.FILES['upload']
-        project = request.POST["projects"]
-        platform = request.POST["platform"]
-        ls,platform,project,inrev = corms.main_controller(upload,project,platform)
-        # return HttpResponse(
-        # "<h1>CORMSTOOL</h1> <p>results: {0}".format(ls))
-        # fss = FileSystemStorage()
-        # file = fss.save(upload.name, upload)
-        # file_url = fss.url(file)
-        return render(request, 'upload.html', {'results': ls,'platform':platform,'project':project,'inactive':inrev})
-    return render(request, 'upload.html')
+    df,accuracy = feedback.check()
+    if request.method == 'POST': 
+        upload = request.FILES.get('upload', False)
+        if upload:
+            upload = request.FILES['upload']
+            project = request.POST["projects"]
+            platform = request.POST["platform"]
+            ls,platform,project,inrev = corms.main_controller(upload,project,platform)
+            context = {
+                'score':accuracy,'results': ls,'platform':platform,'project':project,'inactive':inrev
+            }
+            return render(request, 'upload.html', context)
+        else:
+            ans = request.POST['feedback']
+            accuracy = feedback.update(ans,df)
+            context = {'feedback': feedback,"score":accuracy}
+            return render(request, 'upload.html', context)
+    return render(request, 'upload.html', {"score":accuracy})
 
-def home(request):
-    return render(request, 'home.html')
-
-def demo(request):
-    name="prahar"
-    ls = corms.main_controller()
-    # print("hiii")
-    # return HttpResponse()
-    return HttpResponse(
-        "<h1>CORMSTOOL</h1> <p>results: {0}".format(ls))
+def download_file(request,filename=''):
+    if filename != '':
+        # Define Django project base directory
+        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        # Define the full file path
+        filepath = BASE_DIR + '/cormstool/corms/files/' + filename
+        # Open the file for reading content
+        path = open(filepath, 'rb')
+        # Set the mime type
+        mime_type, _ = mimetypes.guess_type(filepath)
+        # Set the return value of the HttpResponse
+        response = HttpResponse(path, content_type=mime_type)
+        # Set the HTTP header for sending to browser
+        response['Content-Disposition'] = "attachment; filename=%s" % filename
+        # Return the response value
+        return response
+    else:
+        return render(request, 'upload.html')

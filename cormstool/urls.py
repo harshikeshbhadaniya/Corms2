@@ -19,15 +19,8 @@ from django.urls import include,path
 from . import views
 from django.conf import settings #add this
 from django.conf.urls.static import static #add this
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('', views.demo, name = 'index'),
     path("", views.upload, name="upload"),
-    # path('geek/', views.geeks_view, name="geek"),
-    # path('home/', views.home, name="home")
-    # path('', include("home.urls")),
-    # # Added Following Two Lines Of Code
-    # url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
-    # url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
+    path('download/<str:filename>', views.download_file, name="download_file")
 ]

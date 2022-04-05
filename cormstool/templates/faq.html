@@ -1,0 +1,22 @@
+<hr class="my-4 new">
+<h1 class="display-6">FAQS</h1>
+<button class="btn btn-block btn-light btn-my" style="text-align:left" type="button" data-toggle="collapse" data-target="#c1" aria-expanded="false" aria-controls="collapseExample">
+    <b>I don't know how to create JSON file or I have some problems with it.</b>
+</button>
+<div class="collapse" id="c1">
+    <div class="card card-body">
+    <p>1. Please download our <a href="{% url 'download_file' filename='sample.json' %}" download>sample JSON file</a>.</p>
+    <p>2. Open it in notepad and edit the content as per your code-review request.</p>
+    <p>3. Save it and upload it in our tool to view predictions.</p> 
+    </div>
+</div>
+<button class="btn btn-block btn-light btn-my" style="text-align:left" type="button" data-toggle="collapse" data-target="#c2" aria-expanded="false" aria-controls="collapseExample">
+    <b>My project is not listed in CORMS.</b>
+</button>
+<div class="collapse" id="c2">
+<div class="card card-body">
+    <p>1. Mail us your Gerrit or GitHub <b>project url</b>. <a href = "mailto: pandyaprahar401@gmail.com">Send Email</a> </p>
+    <p>2. We will fetch your past reviews and will make it available to predict reviewers for new reviews.</p>
+    <p>(This process may take around 5-10 days depending upon the availability or testing errors in these data)</p>
+</div>
+</div>

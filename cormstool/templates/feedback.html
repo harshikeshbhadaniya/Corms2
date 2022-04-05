@@ -1,0 +1,10 @@
+<hr class="my-4 new">
+<h1 class="display-6">FEEDBACK</h1>
+{% if feedback %}
+<h4 class="my-4">Thanks for giving us your valuable feedback!</h4>
+{% endif %}
+{% if score %}
+<h4 class="my-4">Accuracy of CORMS tested by users: <b>{{score}}</b>%</h4>
+{% else %}
+<p>Accuracy score is not available. </p>
+{% endif %}

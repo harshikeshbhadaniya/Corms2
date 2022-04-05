@@ -1,0 +1,27 @@
+<hr class="my-4 new">
+<h1 class="display-6">RESULTS</h1>
+<h4 class="my-4"><b>CORMS</b> predicted the following Top-10 reviewers for your review based on 
+    the data collected from <b style="text-transform: uppercase;">{{ platform }} {{ project }}</b> project.</h4>
+<h5>(Our models are trained based on the datasets collected in <b>December,2021</b>)</h5>
+<table id="table1" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Score</th>
+            <th>Reviewer_ID</th>
+            <th>Name</th>
+            <th>Last Reviewed</th>
+            <th>Ongoing Reviews</th>
+            <!-- <th>EMAIL</th> -->
+        </tr>
+    </thead>
+    <tbody>
+    {% for key in results %}
+    <tr>
+        {% for data in key %}
+        <td>{{ data }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}          
+    </tbody>
+</table>

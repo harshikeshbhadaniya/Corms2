@@ -1,0 +1,23 @@
+<h4>We removed following <b style="color:red">inactive reviewers</b> from our results</h4>
+<table id="table2" class="display" style="width:100%">
+<thead>
+    <tr>
+        <th>No</th>
+        <th>Score</th>
+        <th>Reviewer_ID</th>
+        <th>Name</th>
+        <th>Last Reviewed</th>
+        <th>Ongoing Reviews</th>
+        <!-- <th>EMAIL</th> -->
+    </tr>
+</thead>
+<tbody>
+    
+    {% for key in inactive %}
+    <tr>
+    {% for data in key %}
+    <td>{{ data }}</td>
+    {% endfor %}
+</tr>
+    {% endfor %}           
+    </tbody></table>

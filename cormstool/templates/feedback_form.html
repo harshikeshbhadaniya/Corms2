@@ -1,0 +1,14 @@
+<form id="feedbackForm" method="post" enctype="multipart/form-data">
+{% csrf_token %}
+<h3>Please give us your valuable feedback</h3>
+<hr class="newline">
+<p>Are your actual reviewers available in our Top-10 prediction list?</p>
+<input style="width:5%" type="radio" id="feedyes" checked name="feedback" value="yes">
+<label for="feedyes">Yes, All available</label>
+<input style="width:5%" type="radio" id="feedno" name="feedback" value="no">
+<label for="feedno">No</label>
+<input style="width:5%" type="radio" id="feedsome" name="feedback" value="some">
+<label for="feedsome">Some are available</label>
+<hr class="newline">
+<button class="btn btn-primary" type="submit">Submit</button>
+</form>

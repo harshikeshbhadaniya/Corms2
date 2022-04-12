@@ -3,7 +3,7 @@ import pandas as pd
 import csv
 from csv import writer
 def update_profile(project):
-    csv_path = project+"/github_"+project+".csv"
+    csv_path = project+"/"+project+".csv"
     new_path = project+"/fp_"+project+".csv"
     header_list = ["Author","Author_Name", "Subject","Project/Subproject","All Reviewers","Reviewers Name","Created","Closed At","File Info","URL","commit_url","Change_Size","status"]
     df = pd.read_csv(csv_path, names=header_list, sep=';', encoding= 'unicode_escape')
@@ -23,4 +23,4 @@ def update_profile(project):
         for key, value in names.items():
             writer.writerow([key, value])
 
-update_profile("shopify")
+update_profile("EbookFoundation")

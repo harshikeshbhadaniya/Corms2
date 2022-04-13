@@ -15,7 +15,7 @@ def main_controller(f,project_h,platform):
   proj_csv = "cormstool/corms/files/"+project_h+"/"+project_h+".csv"
   if(platform=="gerrit"):
     header_list = ["Author", "Project/Subproject","Change_Size", "Final Reviewers","All Reviewers","File Info","Subject"]
-    df = pd.read_csv(proj_csv, names=header_list)
+    df = pd.read_csv(proj_csv, names=header_list,encoding="unicode_escape")
   else:
     header_list = ["Author","Author_Name", "Subject","Project/Subproject","All Reviewers","Reviewers Name","Created","Closed At","File Info","URL","commit_url","Change_Size","status"]
     df = pd.read_csv(proj_csv, names=header_list, sep=';', encoding= 'unicode_escape')

@@ -5,7 +5,7 @@
 </button>
 <div class="collapse" id="c1">
     <div class="card card-body">
-    <p>1. Please download our <a href="{% url 'download_file' filename='sample.json' %}" download>sample JSON file</a>.</p>
+    <p>1. Please download our <a class="btn btn-success" href="{% url 'download_file' filename='sample.json' %}" download>Sample JSON File</a></p>
     <p>2. Open it in notepad and edit the content as per your code-review request.</p>
     <p>3. Save it and upload it in our tool to view predictions.</p> 
     </div>
@@ -15,8 +15,33 @@
 </button>
 <div class="collapse" id="c2">
 <div class="card card-body">
-    <p>1. Mail us your Gerrit or GitHub <b>project url</b>. <a href = "mailto: pandyaprahar401@gmail.com">Send Email</a> </p>
-    <p>2. We will fetch your past reviews and will make it available to predict reviewers for new reviews.</p>
-    <p>(This process may take around 5-10 days depending upon the availability or testing errors in these data)</p>
+    <p>1. Add your Gerrit or GitHub project by just giving the <b>project url</b> information: <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Add Project</button></p>
+    <p>2. Our system will fetch recent reviews of this project and will add it in the corms supported projects.</p>
+    <p>(This process may take around 1 week depending upon the availability and testing of new data)</p>
 </div>
 </div>
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <form id="proForm" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <label for="project">Project URL:</label>
+            <input type="text" id="project" name="project">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Add Project</button>
+        </div>
+      </div>
+    </div>
+    </form>
+  </div> -->

@@ -14,15 +14,25 @@ def upload(request):
             project = request.POST["projects"]
             platform = request.POST["platform"]
             ls,platform,project,inrev = corms.main_controller(upload,project,platform)
+            notification = "CORMS has successfully predicted reviewers for your new review request! CHECK RESULTS NOW!"
             context = {
-                'score':accuracy,'results': ls,'platform':platform,'project':project,'inactive':inrev
+                'score':accuracy,'results': ls,'platform':platform,'project':project,'inactive':inrev,'notification':notification                
             }
             return render(request, 'upload.html', context)
         else:
-            ans = request.POST['feedback']
-            accuracy = feedback.update(ans,df)
-            context = {'feedback': feedback,"score":accuracy}
-            return render(request, 'upload.html', context)
+            feed = request.POST.get('feedback', False)
+            if feed:
+                ans = request.POST['feedback']
+                accuracy = feedback.update(ans,df)
+                notification = "Thanks for giving us your valuable feedback!"
+                context = {'feedback': feedback,"score":accuracy,'notification':notification}
+                return render(request, 'upload.html', context)
+            else:
+                project = request.POST['project']
+                url = request.POST['url']
+                notification = "New project request for " + project+ " is submitted successfully!"
+                context = {'notification':notification}
+                return render(request, 'upload.html', context)
     return render(request, 'upload.html', {"score":accuracy})
 
 def download_file(request,filename=''):

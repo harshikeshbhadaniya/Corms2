@@ -4,34 +4,60 @@ import cormstool.corms.corms_openstack as corms
 import cormstool.corms.feedback as feedback
 import os
 import mimetypes
+from django.conf import settings
+import pymongo
+import cormstool.corms.projects as projects
 
 def upload(request):
-    df,accuracy = feedback.check()
+    client = pymongo.MongoClient(settings.DB_NAME)
+    db = client['CORMS']
+    feed_collection = db["Feedback"]
+    score,total,accuracy = feedback.check(feed_collection)
     if request.method == 'POST': 
         upload = request.FILES.get('upload', False)
         if upload:
             upload = request.FILES['upload']
             project = request.POST["projects"]
             platform = request.POST["platform"]
-            ls,platform,project,inrev = corms.main_controller(upload,project,platform)
-            notification = "CORMS has successfully predicted reviewers for your new review request! CHECK RESULTS NOW!"
-            context = {
-                'score':accuracy,'results': ls,'platform':platform,'project':project,'inactive':inrev,'notification':notification                
-            }
+            try:
+                ls,platform,project,inrev = corms.main_controller(upload,project,platform)
+                notification = "CORMS has successfully predicted reviewers for your new review request! CHECK RESULTS NOW!"
+                status=True
+                context = {
+                    'status':status,'score':accuracy,'results': ls,'platform':platform,'project':project,'inactive':inrev,'notification':notification                
+                }
+            except:
+                status=False
+                notification = "Some error occured! Please try again later."
+                context = {'notification':notification,"status":status}
             return render(request, 'upload.html', context)
         else:
             feed = request.POST.get('feedback', False)
             if feed:
                 ans = request.POST['feedback']
-                accuracy = feedback.update(ans,df)
-                notification = "Thanks for giving us your valuable feedback!"
-                context = {'feedback': feedback,"score":accuracy,'notification':notification}
+                project = request.POST['project']
+                try:
+                    accuracy = feedback.update(ans,score,total,feed_collection,project)
+                    notification = "Thanks for giving us your valuable feedback!"
+                    status=True
+                    context = {'status':status,'feedback': feedback,"score":accuracy,'notification':notification}
+                except:
+                    notification = "Some error occured! Please try again later."
+                    status=False
+                    context = {'status':status,'notification':notification,'feedback': feedback}
                 return render(request, 'upload.html', context)
             else:
                 project = request.POST['project']
                 url = request.POST['url']
-                notification = "New project request for " + project+ " is submitted successfully!"
-                context = {'notification':notification}
+                platform = request.POST['platform']
+                proj_collection = db["Projects"]
+                if(projects.add_project(proj_collection,project,url,platform)):
+                    notification = "New project request for " + project+ " is submitted successfully!"
+                    status = True
+                else:
+                    notification = "Some error occured! Please try again later."
+                    status = False
+                context = {'notification':notification,"status":status}
                 return render(request, 'upload.html', context)
     return render(request, 'upload.html', {"score":accuracy})
 

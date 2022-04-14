@@ -19,17 +19,17 @@ def upload(request):
             upload = request.FILES['upload']
             project = request.POST["projects"]
             platform = request.POST["platform"]
-            try:
-                ls,platform,project,inrev = corms.main_controller(upload,project,platform)
-                notification = "CORMS has successfully predicted reviewers for your new review request! CHECK RESULTS NOW!"
-                status=True
-                context = {
-                    'status':status,'score':accuracy,'results': ls,'platform':platform,'project':project,'inactive':inrev,'notification':notification                
-                }
-            except:
-                status=False
-                notification = "Some error occured! Please try again later."
-                context = {'notification':notification,"status":status}
+            # try:
+            ls,platform,project,inrev = corms.main_controller(upload,project,platform)
+            notification = "CORMS has successfully predicted reviewers for your new review request! CHECK RESULTS NOW!"
+            status=True
+            context = {
+                'status':status,'score':accuracy,'results': ls,'platform':platform,'project':project,'inactive':inrev,'notification':notification                
+            }
+            # except:
+            #     status=False
+            #     notification = "Some error occured! Please try again later."
+            #     context = {'notification':notification,"status":status}
             return render(request, 'upload.html', context)
         else:
             feed = request.POST.get('feedback', False)

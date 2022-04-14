@@ -27,7 +27,7 @@ def main_controller(f,project_h,platform):
     df,new_reviews,workload = process.process_github(df)
     rev_act = active.github_act(df,new_reviews)
 
-  train_transformer,model_svm = ensemble_model.model_train(df,new_reviews)
+  # train_transformer,model_svm = ensemble_model.model_train(df,new_reviews,project_h)
   new_review = json.load(f)
 
   author = new_review["author"]
@@ -39,7 +39,8 @@ def main_controller(f,project_h,platform):
 
   final_score = similarity_model.measure(df,author,project,files)
   sub =  text_cleaning(subject)  
-  rev = ensemble_model.predict(sub,train_transformer,model_svm)
+  # rev = ensemble_model.predict(sub,train_transformer,model_svm)
+  rev = ensemble_model.predict_new(sub,project_h,df["Subject"])
   if rev[0] in final_score:
     final_score[rev[0]]+=1
   else:

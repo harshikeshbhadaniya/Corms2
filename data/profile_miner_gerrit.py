@@ -74,9 +74,9 @@ def findrev(number,project):
 
 if __name__ == "__main__":
     # 1. Download change details status=Status.closed
-    miner = Miner(gerrit=Gerrit.mano, replace=False)
+    miner = Miner(gerrit=Gerrit.unlegacy, replace=False)
 
-project="mano"
+project="unlegacy"
 make_profile(project)
 load_profiles(miner,project)
 update_profile(project)

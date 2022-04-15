@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-import cormstool.corms.corms_openstack as corms
+import cormstool.corms.corms_controller as corms
 import cormstool.corms.feedback as feedback
 import os
 import mimetypes

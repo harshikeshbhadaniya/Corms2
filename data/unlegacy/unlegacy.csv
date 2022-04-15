@@ -1,3 +1,4 @@
+Author,Project/Subproject,Change_Size,Final Reviewers,All Reviewers,File Info,Subject,Status
 1000038,Unlegacy-Android/android_device_samsung_espresso,114,[1000038],[1000038],"['audio/audio_hw.c', 'audio/tiny_hw_espresso10wifi.xml', 'audio/tiny_hw_espressowifi.xml', 'rootdir/init.espresso.rc']",Changes for working lineout via the keyboard- and desktop dock,closed
 1000038,Unlegacy-Android/android_device_samsung_espresso,114,[1000038],[1000038],"['audio/audio_hw.c', 'audio/tiny_hw_espresso10wifi.xml', 'audio/tiny_hw_espressowifi.xml', 'rootdir/init.espresso.rc']",Changes for working lineout via the keyboard- and desktop dock,closed
 1000038,Unlegacy-Android/android_device_samsung_espresso3g,113,[1000038],[1000038],"['audio/tiny_hw_espresso.xml', 'audio/tiny_hw_espresso10.xml']",Fixed the lineout via the keyboard- and desktop dock,closed
@@ -14,31 +15,31 @@
 1000002,Unlegacy-Android/android_kernel_ti_omap4,2,"[1000002, 1000038]","[1000002, 1000003, 1000038]",['drivers/gpu/ion/omap/omap_tiler_heap.c'],ion: omap: [TEMP] Force page-aligned Tiler allocations,closed
 1000002,Unlegacy-Android/android_kernel_ti_omap4,45,"[1000002, 1000038]","[1000002, 1000003, 1000038]","['drivers/rpmsg/rpmsg_omx.c', 'include/linux/rpmsg_omx.h']",omap: rpmsg-omx: Switch to new PVR API,closed
 1000002,Unlegacy-Android/android_kernel_ti_omap4,2,"[1000002, 1000038]","[1000002, 1000003, 1000038]",['drivers/rpmsg/rpmsg_omx.c'],"Revert ""rpmsg: omx: return correct handle count in 'OMX_IOCPVRREGISTER'""",closed
-1000003,Unlegacy-Android/android_hardware_ti_omap4,9,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['drivers/rpmsg/rpmsg_omx.c'],pvr-km/init: Load PVR kernel modules from root,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,12,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['drivers/rpmsg/rpmsg_omx.c'],"Revert ""domx: add board config for LOW_SECURE_HEAP""",new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,4,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['drivers/rpmsg/rpmsg_omx.c'],libtiutils: [TEMP] LOCAL_CLANG_CFLAGS for Pie building,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,6,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['drivers/rpmsg/rpmsg_omx.c'],tf_daemon: [TEMP] LOCAL_CLANG_CFLAGS for Pie building,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,8,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['drivers/rpmsg/rpmsg_omx.c'],domx: [TEMP] LOCAL_[CLANG_]CFLAGS for Pie building,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,4,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['drivers/rpmsg/rpmsg_omx.c'],pvrsrvinit: Use LOCAL_SHARED_LIBRARIES for prebuilts,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,2,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['drivers/rpmsg/rpmsg_omx.c'],SkLibTiJpeg_Test: Use libhwui.so instead of libskia.so,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,36,"[1000003, 1000002, 1000038, 1000037]","[1000002, 1000003, 1000037, 1000038]",['drivers/rpmsg/rpmsg_omx.c'],domx: Change default ION allocations to use TILER1D,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,4,"[1000003, 1000002, 1000038, 1000037]","[1000002, 1000003, 1000037, 1000038]",['drivers/rpmsg/rpmsg_omx.c'],omx_rpc: fix fd validity check,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,32,"[1000003, 1000002, 1000038, 1000037]","[1000002, 1000003, 1000037, 1000038]",['drivers/rpmsg/rpmsg_omx.c'],proxy: camera: improve fd handling,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,11,"[1000003, 1000002, 1000038, 1000037]","[1000002, 1000003, 1000037, 1000038]",['drivers/rpmsg/rpmsg_omx.c'],memplugin: fix bufferFd data type,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,14,"[1000003, 1000002, 1000038, 1000037]","[1000002, 1000003, 1000037, 1000038]",['drivers/rpmsg/rpmsg_omx.c'],omx_rpc: fix max OMX functions number,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,1,"[1000003, 1000002, 1000038, 1000037]","[1000002, 1000003, 1000037, 1000038]",['drivers/rpmsg/rpmsg_omx.c'],OMX_Core: Fix Leak in Case of Init Failure,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,2,"[1000003, 1000002, 1000038, 1000037]","[1000002, 1000003, 1000037, 1000038]",['drivers/rpmsg/rpmsg_omx.c'],OMX: osal: fix WritetoFrontPipe api logic,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,13,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['drivers/rpmsg/rpmsg_omx.c'],android-api: Add O MR1 and P defines,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,4,"[1000003, 1000002, 1000038, 1000037]","[1000002, 1000003, 1000037, 1000038]",['drivers/rpmsg/rpmsg_omx.c'],omap4: Allow scissor optimization with new DDK,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,2,"[1000003, 1000002, 1000038, 1000037]","[1000002, 1000003, 1000037, 1000038]",['drivers/rpmsg/rpmsg_omx.c'],SGX-BIN: srvkm: osfunc.c: Fix -Wstringop-truncation,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,28,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['drivers/rpmsg/rpmsg_omx.c'],libpower: Also initialize private module fields,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,1,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['drivers/rpmsg/rpmsg_omx.c'],board: Explicitly skip OMX buffer reallocation,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,6,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['drivers/rpmsg/rpmsg_omx.c'],"SGX-BIN: build: Adapt PLATFORM_{RELEASE,CODENAME} for O/P",new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,40,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['drivers/rpmsg/rpmsg_omx.c'],libpower: Make powerHAL compatible for passthrough HIDL design,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,2,"[1000003, 1000002, 1000038, 1000037]","[1000002, 1000003, 1000037, 1000038]",['drivers/rpmsg/rpmsg_omx.c'],common/omap4: Add keymaster and power HIDL implementations,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,4,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['drivers/rpmsg/rpmsg_omx.c'],common: Add required graphics HIDL implementations,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,5,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['drivers/rpmsg/rpmsg_omx.c'],board/manifest: Copy a stub HIDL manifest via board flag,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,8,"[1000003, 1000002, 1000038, 1000037]","[1000002, 1000003, 1000037, 1000038]",['drivers/rpmsg/rpmsg_omx.c'],common: [O+] Copy vendor seccomp policy to /vendor,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,9,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['drivers/rpmsg/rpmsg_omx.c'],pvr-km/init: Load PVR kernel modules from root,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,12,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['drivers/rpmsg/rpmsg_omx.c'],"Revert ""domx: add board config for LOW_SECURE_HEAP""",new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,4,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['drivers/rpmsg/rpmsg_omx.c'],libtiutils: [TEMP] LOCAL_CLANG_CFLAGS for Pie building,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,6,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['drivers/rpmsg/rpmsg_omx.c'],tf_daemon: [TEMP] LOCAL_CLANG_CFLAGS for Pie building,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,8,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['drivers/rpmsg/rpmsg_omx.c'],domx: [TEMP] LOCAL_[CLANG_]CFLAGS for Pie building,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,4,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['drivers/rpmsg/rpmsg_omx.c'],pvrsrvinit: Use LOCAL_SHARED_LIBRARIES for prebuilts,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,2,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['drivers/rpmsg/rpmsg_omx.c'],SkLibTiJpeg_Test: Use libhwui.so instead of libskia.so,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,36,"[1000003, 1000002, 1000038, 1000037]","[1000003, 1000002, 1000038, 1000037]",['drivers/rpmsg/rpmsg_omx.c'],domx: Change default ION allocations to use TILER1D,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,4,"[1000003, 1000002, 1000038, 1000037]","[1000003, 1000002, 1000038, 1000037]",['drivers/rpmsg/rpmsg_omx.c'],omx_rpc: fix fd validity check,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,32,"[1000003, 1000002, 1000038, 1000037]","[1000003, 1000002, 1000038, 1000037]",['drivers/rpmsg/rpmsg_omx.c'],proxy: camera: improve fd handling,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,11,"[1000003, 1000002, 1000038, 1000037]","[1000003, 1000002, 1000038, 1000037]",['drivers/rpmsg/rpmsg_omx.c'],memplugin: fix bufferFd data type,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,14,"[1000003, 1000002, 1000038, 1000037]","[1000003, 1000002, 1000038, 1000037]",['drivers/rpmsg/rpmsg_omx.c'],omx_rpc: fix max OMX functions number,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,1,"[1000003, 1000002, 1000038, 1000037]","[1000003, 1000002, 1000038, 1000037]",['drivers/rpmsg/rpmsg_omx.c'],OMX_Core: Fix Leak in Case of Init Failure,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,2,"[1000003, 1000002, 1000038, 1000037]","[1000003, 1000002, 1000038, 1000037]",['drivers/rpmsg/rpmsg_omx.c'],OMX: osal: fix WritetoFrontPipe api logic,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,13,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['drivers/rpmsg/rpmsg_omx.c'],android-api: Add O MR1 and P defines,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,4,"[1000003, 1000002, 1000038, 1000037]","[1000003, 1000002, 1000038, 1000037]",['drivers/rpmsg/rpmsg_omx.c'],omap4: Allow scissor optimization with new DDK,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,2,"[1000003, 1000002, 1000038, 1000037]","[1000003, 1000002, 1000038, 1000037]",['drivers/rpmsg/rpmsg_omx.c'],SGX-BIN: srvkm: osfunc.c: Fix -Wstringop-truncation,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,28,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['drivers/rpmsg/rpmsg_omx.c'],libpower: Also initialize private module fields,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,1,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['drivers/rpmsg/rpmsg_omx.c'],board: Explicitly skip OMX buffer reallocation,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,6,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['drivers/rpmsg/rpmsg_omx.c'],"SGX-BIN: build: Adapt PLATFORM_{RELEASE,CODENAME} for O/P",new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,40,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['drivers/rpmsg/rpmsg_omx.c'],libpower: Make powerHAL compatible for passthrough HIDL design,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,2,"[1000003, 1000002, 1000038, 1000037]","[1000003, 1000002, 1000038, 1000037]",['drivers/rpmsg/rpmsg_omx.c'],common/omap4: Add keymaster and power HIDL implementations,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,4,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['drivers/rpmsg/rpmsg_omx.c'],common: Add required graphics HIDL implementations,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,5,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['drivers/rpmsg/rpmsg_omx.c'],board/manifest: Copy a stub HIDL manifest via board flag,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,8,"[1000003, 1000002, 1000038, 1000037]","[1000003, 1000002, 1000038, 1000037]",['drivers/rpmsg/rpmsg_omx.c'],common: [O+] Copy vendor seccomp policy to /vendor,new
 1000003,Unlegacy-Android/android_hardware_ti_omap4,9,"[1000003, 1000002, 1000038]","[1000002, 1000003, 1000037, 1000038]",['pvr-source/services4/srvkm/env/linux/ion.c'],SGX-KM: ion: skip ion_phys check on the system heap,closed
 1000003,Unlegacy-Android/android_hardware_ti_omap4,137,"[1000002, 1000038]","[1000002, 1000037, 1000038]","['common.mk', 'libcorkscrew/Android.mk', 'libcorkscrew/corkscrew.c', 'libcorkscrew/corkscrew.h']",common: Remove unneeded libcorkscrew,closed
 1000003,Unlegacy-Android/android_hardware_ti_omap4,70,[1000038],"[1000002, 1000037, 1000038]",['pvr-source/services4/system/omap/sgxfreq_on3demand.c'],SGX-KM: sgxfreq: on3demand: add usage polling after render,closed
@@ -72,7 +73,7 @@
 1000003,Unlegacy-Android/proprietary_vendor_ti,6,"[1000003, 1000002, 1000038]","[1000002, 1000003, 1000037, 1000038]",['omap4/graphics/Android.mk'],omap4: graphics: Re-enable all LOCAL_PACK_MODULE_RELOCATIONS,closed
 1000218,Unlegacy-Android/proprietary_vendor_lenovo,93,[1000218],[1000218],"['a2109/BoardConfigPartial.mk', 'a2109/BoardConfigVendor.mk', 'a2109/device-partial.mk', 'a2109/device-vendor.mk', 'a2109/proprietary/Android.mk', 'a2109/proprietary/libsensors.base.so', 'a2109/proprietary/libsensors.jsa1127.so', 'a2109/proprietary/libsensors.lis3dh.so', 'a2109/proprietary/sensors.kai.so']",Remove proprietary sensors HAL,closed
 1000218,Unlegacy-Android/android_device_lenovo_a2109,1961,[1000218],[1000218],"['device_a2109.mk', 'libsensors/Android.mk', 'libsensors/InputEventReader.cpp', 'libsensors/InputEventReader.h', 'libsensors/Lis3dhAccel.cpp', 'libsensors/Lis3dhAccel.h', 'libsensors/SensorBase.cpp', 'libsensors/SensorBase.h', 'libsensors/jsa1127Light.cpp', 'libsensors/jsa1127Light.h', 'libsensors/sensorDetect.cpp', 'libsensors/sensors.cpp', 'libsensors/sensors.h', 'rootdir/init.kai.rc']",libsensors: add open-source HAL,closed
-1000003,Unlegacy-Android/proprietary_vendor_broadcom,31,"[1000003, 1000002, 1000313, 1000046]","[1000002, 1000003, 1000046, 1000313]","['device_a2109.mk', 'libsensors/Android.mk', 'libsensors/InputEventReader.cpp', 'libsensors/InputEventReader.h', 'libsensors/Lis3dhAccel.cpp', 'libsensors/Lis3dhAccel.h', 'libsensors/SensorBase.cpp', 'libsensors/SensorBase.h', 'libsensors/jsa1127Light.cpp', 'libsensors/jsa1127Light.h', 'libsensors/sensorDetect.cpp', 'libsensors/sensors.cpp', 'libsensors/sensors.h', 'rootdir/init.kai.rc']",nfc: [TEMP] Add prebuilt nfc_nci.bcm2079x.default,new
+1000003,Unlegacy-Android/proprietary_vendor_broadcom,31,"[1000003, 1000002, 1000313, 1000046]","[1000003, 1000002, 1000313, 1000046]","['device_a2109.mk', 'libsensors/Android.mk', 'libsensors/InputEventReader.cpp', 'libsensors/InputEventReader.h', 'libsensors/Lis3dhAccel.cpp', 'libsensors/Lis3dhAccel.h', 'libsensors/SensorBase.cpp', 'libsensors/SensorBase.h', 'libsensors/jsa1127Light.cpp', 'libsensors/jsa1127Light.h', 'libsensors/sensorDetect.cpp', 'libsensors/sensors.cpp', 'libsensors/sensors.h', 'rootdir/init.kai.rc']",nfc: [TEMP] Add prebuilt nfc_nci.bcm2079x.default,new
 1000223,Unlegacy-Android/proprietary_vendor_broadcom,0,[1000002],[1000002],"['device_a2109.mk', 'libsensors/Android.mk', 'libsensors/InputEventReader.cpp', 'libsensors/InputEventReader.h', 'libsensors/Lis3dhAccel.cpp', 'libsensors/Lis3dhAccel.h', 'libsensors/SensorBase.cpp', 'libsensors/SensorBase.h', 'libsensors/jsa1127Light.cpp', 'libsensors/jsa1127Light.h', 'libsensors/sensorDetect.cpp', 'libsensors/sensors.cpp', 'libsensors/sensors.h', 'rootdir/init.kai.rc']",transformer: switch to gpsd from manta,new
 1000223,Unlegacy-Android/proprietary_vendor_asus,6,[1000223],[1000223],"['transformer/BoardConfigVendor.mk', 'transformer/asus-vendor-blobs.mk', 'transformer/asus-vendor.mk', 'transformer/proprietary/vendor/lib/libnvodm_imager.so', 'transformer/proprietary/vendor/lib/libnvodm_query.so']",transformer: add ODM blobs,closed
 1000223,Unlegacy-Android/android_device_asus_transformer,11,[1000223],[1000223],"['camera/nvcamera.conf', 'device-common.mk', 'media/media_profiles.xml']",camera: support only front camera,closed
@@ -105,22 +106,22 @@
 1000038,Unlegacy-Android/android_vendor_unlegacy,2,[1000000],[1000000],['core/version_defaults.mk'],repopick: Ignore the trailing slash in change numbers,new
 1000038,Unlegacy-Android/android_vendor_unlegacy,20,[1000000],[1000000],['core/version_defaults.mk'],repopick: Try to keep the changes sorted,new
 1000038,Unlegacy-Android/android_vendor_unlegacy,3,[1000000],[1000000],['core/version_defaults.mk'],repopick: Support overriding the default commits count to check,new
-1000038,Unlegacy-Android/android_vendor_unlegacy,8,"[1000225, 1000000]","[1000000, 1000225]",['core/version_defaults.mk'],repopick: Add 'reset' option,new
+1000038,Unlegacy-Android/android_vendor_unlegacy,8,"[1000225, 1000000]","[1000225, 1000000]",['core/version_defaults.mk'],repopick: Add 'reset' option,new
 1000038,Unlegacy-Android/android_vendor_unlegacy,2,[1000000],[1000000],['core/version_defaults.mk'],repopick: don't bail on drafts,new
 1000038,Unlegacy-Android/android_vendor_unlegacy,5,[1000000],[1000000],['core/version_defaults.mk'],repopick: Don't convert patchset to int if it's None,new
 1000038,Unlegacy-Android/android_vendor_unlegacy,3,[1000000],[1000000],['core/version_defaults.mk'],repopick: Fix cherry picking specific patchsets,new
 1000038,Unlegacy-Android/android_vendor_unlegacy,2,[1000000],[1000000],['core/version_defaults.mk'],repopick: encode commit subjects in utf-8 for printing,new
-1000038,Unlegacy-Android/android_vendor_unlegacy,8,"[1000003, 1000002, 1000038]","[1000002, 1000003, 1000038]",['core/version_defaults.mk'],espresso/espresso3g: include tablet overlay,new
-1000003,Unlegacy-Android/android_vendor_unlegacy,0,"[1000002, 1000000, 1000038, 1000037]","[1000000, 1000002, 1000037, 1000038]",['core/version_defaults.mk'],Add proper sized Wallpaper for Tablets,new
-1000038,Unlegacy-Android/android_vendor_unlegacy,0,"[1000003, 1000002, 1000038]","[1000002, 1000003, 1000038]",['core/version_defaults.mk'],overlay: fix wallpaper resolution for DDK1.14,new
+1000038,Unlegacy-Android/android_vendor_unlegacy,8,"[1000003, 1000002, 1000038]","[1000003, 1000002, 1000038]",['core/version_defaults.mk'],espresso/espresso3g: include tablet overlay,new
+1000003,Unlegacy-Android/android_vendor_unlegacy,0,"[1000002, 1000000, 1000038, 1000037]","[1000002, 1000000, 1000038, 1000037]",['core/version_defaults.mk'],Add proper sized Wallpaper for Tablets,new
+1000038,Unlegacy-Android/android_vendor_unlegacy,0,"[1000003, 1000002, 1000038]","[1000003, 1000002, 1000038]",['core/version_defaults.mk'],overlay: fix wallpaper resolution for DDK1.14,new
 1000223,Unlegacy-Android/android_hardware_nvidia_tegra3,224,[1000223],[1000223],['core/version_defaults.mk'],Add memtrack HAL,new
 1000000,Unlegacy-Android/android_kernel_nvidia_tegra3,2,[1000000],[1000000],['core/version_defaults.mk'],[TEST] arm: tegra: Reduce cpu freq transition latency,new
-1000038,Unlegacy-Android/android_kernel_ti_omap4,4,"[1000003, 1000002, 1000038]","[1000002, 1000003, 1000038]",['core/version_defaults.mk'],OMAP PM: Optimize cpufreq transition latency,new
+1000038,Unlegacy-Android/android_kernel_ti_omap4,4,"[1000003, 1000002, 1000038]","[1000003, 1000002, 1000038]",['core/version_defaults.mk'],OMAP PM: Optimize cpufreq transition latency,new
 1000223,Unlegacy-Android/android_device_asus_flo,3,"[1000002, 1000223]","[1000002, 1000223]","['device-common.mk', 'sepolicy/file_contexts']",device: Switch to common basic USB HAL,closed
 1000038,Unlegacy-Android/android_kernel_ti_omap4,21,[1000038],[1000038],"['device-common.mk', 'sepolicy/file_contexts']","OMAP4: overclock: fix omap2plus driver, remove frequency limit",new
 1000038,Unlegacy-Android/android_kernel_ti_omap4,90,[1000038],[1000038],"['device-common.mk', 'sepolicy/file_contexts']",OMAP4: overclock: adapting cmenard's OMAP4430 overclock codes,new
 1000038,Unlegacy-Android/android,2,[1000038],[1000038],['android-security.xml'],Fork external/icu for tzdata update,closed
-1000038,Unlegacy-Android/android_vendor_unlegacy,0,"[1000003, 1000002, 1000038]","[1000002, 1000003, 1000038]",['android-security.xml'],overlay: fix wallpaper resolution for DDK1.14,new
+1000038,Unlegacy-Android/android_vendor_unlegacy,0,"[1000003, 1000002, 1000038]","[1000003, 1000002, 1000038]",['android-security.xml'],overlay: fix wallpaper resolution for DDK1.14,new
 1000038,Unlegacy-Android/android_system_core,9,[1000038],[1000038],"['include/cutils/native_handle.h', 'libcutils/native_handle.c']","Revert ""Export maximum number of fds/ints in a native_handle.""",closed
 1000038,Unlegacy-Android/android_system_core,9,[1000038],[1000038],"['include/cutils/native_handle.h', 'libcutils/native_handle.c']",Export maximum number of fds/ints in a native_handle.,closed
 1000038,Unlegacy-Android/android_device_samsung_tuna,5,[1000037],[1000037],"['include/cutils/native_handle.h', 'libcutils/native_handle.c']",audio: Fix aliasing violation.,new
@@ -169,7 +170,7 @@
 1000038,Unlegacy-Android/android,4,[1000038],[1000038],['android-security.xml'],Forks for December ASB,closed
 1000038,Unlegacy-Android/android,2,[1000038],[1000038],['android-security.xml'],Fork vold for December ASB,closed
 1000003,Unlegacy-Android/android_vendor_unlegacy,2,"[1000002, 1000223]","[1000000, 1000002, 1000223]",['build/tasks/bootzip.mk'],bootzip: Use OUT_DIR instead of OUT,closed
-1000153,Unlegacy-Android/android_device_asus_grouper,10,"[1000003, 1000002, 1000223]","[1000002, 1000003, 1000223]",['build/tasks/bootzip.mk'],camera: use legacy camera HAL1,new
+1000153,Unlegacy-Android/android_device_asus_grouper,10,"[1000003, 1000002, 1000223]","[1000003, 1000002, 1000223]",['build/tasks/bootzip.mk'],camera: use legacy camera HAL1,new
 1000003,Unlegacy-Android/android,2,[],[1000003],['aosp.xml'],Manifest for Android 8.1.0 Release 53,closed
 1000003,Unlegacy-Android/unlegacy_tools,2,[],[1000003],['p-forked.sh'],p-forked: Track pie-qpr1-release,closed
 1000038,Unlegacy-Android/android_build,2,[],[1000038],['core/version_defaults.mk'],Bump Security Patch Level to 2018-11-01,closed
@@ -219,22 +220,22 @@
 1000038,Unlegacy-Android/android,6,[1000038],[1000038],['android-security.xml'],Forks for October ASB,closed
 1000003,Unlegacy-Android/proprietary_vendor_qcom,38,[1000223],"[1000003, 1000223]",['msm8974/graphics/graphics-vendor.mk'],msm8974: Swap system/vendor with TARGET_COPY_OUT_VENDOR,closed
 1000038,Unlegacy-Android/android_hardware_ti_omap4,34,"[1000003, 1000038]","[1000002, 1000003, 1000037, 1000038]","['BoardConfigCommon.mk', 'sepolicy/compat/lp/defines.te', 'sepolicy/compat/lp/file_contexts', 'sepolicy/file.te', 'sepolicy/pvrsrvinit.te', 'sepolicy/sepolicy.mk', 'sepolicy/system_server.te']",omap4: sepolicy: fix 4.4 compatibility,closed
-1000223,Unlegacy-Android/android_device_asus_flo,26,"[1000003, 1000002, 1000223]","[1000002, 1000003, 1000223]","['BoardConfigCommon.mk', 'sepolicy/compat/lp/defines.te', 'sepolicy/compat/lp/file_contexts', 'sepolicy/file.te', 'sepolicy/pvrsrvinit.te', 'sepolicy/sepolicy.mk', 'sepolicy/system_server.te']",sepolicy: use flexible vendor file contexts,new
+1000223,Unlegacy-Android/android_device_asus_flo,26,"[1000003, 1000002, 1000223]","[1000003, 1000002, 1000223]","['BoardConfigCommon.mk', 'sepolicy/compat/lp/defines.te', 'sepolicy/compat/lp/file_contexts', 'sepolicy/file.te', 'sepolicy/pvrsrvinit.te', 'sepolicy/sepolicy.mk', 'sepolicy/system_server.te']",sepolicy: use flexible vendor file contexts,new
 1000291,Unlegacy-Android/android_device_asus_grouper,3,[1000223],"[1000002, 1000223]",['rootdir/init.grouper.rc'],init: Change ownership of wifi firmware reload sysfs paths,closed
 1000223,Unlegacy-Android/proprietary_vendor_broadcom,4,[1000002],"[1000002, 1000223]",['flo/device-partial.mk'],flo: swap system/vendor with TARGET_COPY_OUT_VENDOR,closed
 1000223,Unlegacy-Android/proprietary_vendor_asus,4,[1000002],"[1000002, 1000223]",['flo/device-partial.mk'],flo: swap system/vendor with TARGET_COPY_OUT_VENDOR,closed
 1000223,Unlegacy-Android/proprietary_vendor_qcom,18,[1000002],"[1000002, 1000223]",['deb/device-partial.mk'],deb: swap system/vendor with TARGET_COPY_OUT_VENDOR,closed
 1000223,Unlegacy-Android/proprietary_vendor_qcom,244,[1000002],"[1000002, 1000223]","['flo/device-partial.mk', 'flo/proprietary/Android.mk']",flo: swap system/vendor with TARGET_COPY_OUT_VENDOR,closed
 1000223,Unlegacy-Android/proprietary_vendor_qcom,32,[1000002],"[1000002, 1000223]",['msm8960/graphics/graphics-vendor.mk'],msm8960: swap system/vendor with TARGET_COPY_OUT_VENDOR,closed
-1000003,Unlegacy-Android/android_hardware_ti_omap4,26,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['msm8960/graphics/graphics-vendor.mk'],"Revert ""overlay: add common omap4 overlay""",new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,25,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['msm8960/graphics/graphics-vendor.mk'],SGX-BIN: build: android: Re-add missing K/L defs,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,2,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['msm8960/graphics/graphics-vendor.mk'],SGX-BIN: kbuild: Create legacy target symlink,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,4,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['msm8960/graphics/graphics-vendor.mk'],SGX-BIN: kbuild: Quote cross compilation variables,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,6,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['msm8960/graphics/graphics-vendor.mk'],SGX-BIN: build: Ensure fallback compiler config,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,14,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['msm8960/graphics/graphics-vendor.mk'],SGX-BIN: build: android: Add fallback JNI_CPU_ABI,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,8,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['msm8960/graphics/graphics-vendor.mk'],SGX-BIN: build: Downgrade Java toolchain errors,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,6,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['msm8960/graphics/graphics-vendor.mk'],SGX-BIN: srvkm: Make get_unused_fd_flags() K3.19+,new
-1000003,Unlegacy-Android/android_hardware_ti_omap4,12555,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['msm8960/graphics/graphics-vendor.mk'],SGX-BIN: KM source update to 1.17@4948957 release,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,26,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['msm8960/graphics/graphics-vendor.mk'],"Revert ""overlay: add common omap4 overlay""",new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,25,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['msm8960/graphics/graphics-vendor.mk'],SGX-BIN: build: android: Re-add missing K/L defs,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,2,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['msm8960/graphics/graphics-vendor.mk'],SGX-BIN: kbuild: Create legacy target symlink,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,4,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['msm8960/graphics/graphics-vendor.mk'],SGX-BIN: kbuild: Quote cross compilation variables,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,6,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['msm8960/graphics/graphics-vendor.mk'],SGX-BIN: build: Ensure fallback compiler config,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,14,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['msm8960/graphics/graphics-vendor.mk'],SGX-BIN: build: android: Add fallback JNI_CPU_ABI,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,8,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['msm8960/graphics/graphics-vendor.mk'],SGX-BIN: build: Downgrade Java toolchain errors,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,6,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['msm8960/graphics/graphics-vendor.mk'],SGX-BIN: srvkm: Make get_unused_fd_flags() K3.19+,new
+1000003,Unlegacy-Android/android_hardware_ti_omap4,12555,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['msm8960/graphics/graphics-vendor.mk'],SGX-BIN: KM source update to 1.17@4948957 release,new
 1000223,Unlegacy-Android/android_device_asus_transformer,255,[1000223],[1000223],"['BoardConfigCommon.mk', 'dumpstate/Android.mk', 'dumpstate/NOTICE', 'dumpstate/dumpstate.cpp']",Remove legacy dumpstate implementation,closed
 1000223,Unlegacy-Android/android_device_asus_transformer,52,[1000223],[1000223],['device-common.mk'],transformer: move configs to /vendor,closed
 1000223,Unlegacy-Android/android_device_asus_transformer,38,[1000223],[1000223],['media/media_profiles.xml'],media: remove video editor from media_profiles.xml,closed
@@ -279,7 +280,7 @@
 1000223,Unlegacy-Android/android_device_asus_flo,3,[1000002],"[1000002, 1000223]",['sepolicy/mpdecision.te'],sepolicy: remove unnecessary mpdecision dac_override permission,closed
 1000223,Unlegacy-Android/android_device_asus_flo,40,[1000002],"[1000002, 1000223]","['rootdir/fstab.flo', 'rootdir/init.flo.rc']",init: mount /system in early-init,closed
 1000223,Unlegacy-Android/android_device_asus_flo,61,[1000002],"[1000002, 1000223]","['rootdir/init.flo.rc', 'rootdir/ueventd.flo.rc', 'sepolicy/file.te', 'sepolicy/file_contexts', 'sepolicy/hal_sensors_default.te', 'sepolicy/sensors.te']",Run the sensor daemon as 'system' user/group instead of 'root',closed
-1000000,Unlegacy-Android/android_system_bt,64,"[1000003, 1000002, 1000038, 1000037, 1000218, 1000217, 1000223, 1000046]","[1000002, 1000003, 1000037, 1000038, 1000046, 1000217, 1000218, 1000223]","['rootdir/init.flo.rc', 'rootdir/ueventd.flo.rc', 'sepolicy/file.te', 'sepolicy/file_contexts', 'sepolicy/hal_sensors_default.te', 'sepolicy/sensors.te']",Include the missing BLE and GATT ifdefs,new
+1000000,Unlegacy-Android/android_system_bt,64,"[1000003, 1000002, 1000038, 1000037, 1000218, 1000217, 1000223, 1000046]","[1000003, 1000002, 1000038, 1000037, 1000218, 1000217, 1000223, 1000046]","['rootdir/init.flo.rc', 'rootdir/ueventd.flo.rc', 'sepolicy/file.te', 'sepolicy/file_contexts', 'sepolicy/hal_sensors_default.te', 'sepolicy/sensors.te']",Include the missing BLE and GATT ifdefs,new
 1000223,Unlegacy-Android/android_vendor_unlegacy,33,[1000002],"[1000000, 1000002, 1000003, 1000038]","['AndroidProducts.mk', 'products/ua_transformer.mk', 'vendorsetup.sh']",products: add makefiles for Asus Transformers,closed
 1000223,Unlegacy-Android/android_device_asus_transformer,5,[1000223],[1000223],['device-common.mk'],bluetooth: add HIDL implementation and vendor lib,closed
 1000223,Unlegacy-Android/android_device_asus_transformer,16,[1000223],[1000223],"['rootdir/init.transformer.rc', 'device-common.mk', 'manifest.xml']",rootdir: replace net_bt_stack group with bluetooth,closed
@@ -297,8 +298,8 @@
 1000002,Unlegacy-Android/android_hardware_ti_omap4,11,"[1000003, 1000038]","[1000002, 1000003, 1000038]",['libpower/power.c'],libpower: update interactive governor params for performance,closed
 1000038,Unlegacy-Android/android,4,[1000038],[1000038],['android-security.xml'],Forks for September ASB,closed
 1000038,Unlegacy-Android/android_build,2,[1000038],[1000038],['core/version_defaults.mk'],Bump Security Patch Level to 2018-08-01,closed
-1000003,Unlegacy-Android/android_build,8,"[1000003, 1000002, 1000000, 1000038, 1000037, 1000218, 1000217, 1000153, 1000223, 1000046]","[1000000, 1000002, 1000003, 1000037, 1000038, 1000046, 1000153, 1000217, 1000218, 1000223]",['core/version_defaults.mk'],"Revert ""[TEMP] releasetools: don't assert device""",new
-1000003,Unlegacy-Android/android_build_soong,1,"[1000002, 1000000]","[1000000, 1000002]",['core/version_defaults.mk'],root.bp: Also load hardware/*/* toplevel BPs,new
+1000003,Unlegacy-Android/android_build,8,"[1000003, 1000002, 1000000, 1000038, 1000037, 1000218, 1000217, 1000153, 1000223, 1000046]","[1000003, 1000002, 1000000, 1000038, 1000037, 1000218, 1000217, 1000153, 1000223, 1000046]",['core/version_defaults.mk'],"Revert ""[TEMP] releasetools: don't assert device""",new
+1000003,Unlegacy-Android/android_build_soong,1,"[1000002, 1000000]","[1000002, 1000000]",['core/version_defaults.mk'],root.bp: Also load hardware/*/* toplevel BPs,new
 1000003,Unlegacy-Android/proprietary_vendor_lge,1,[1000295],[1000295],['core/version_defaults.mk'],hammerhead: Add faceunlock proprietary file libfrsdk.so,new
 1000003,Unlegacy-Android/android_vendor_unlegacy,13,[1000002],"[1000002, 1000003]",['build/core/qcom_target.mk'],qcom_target: Avoid duplication for common paths,closed
 1000003,Unlegacy-Android/android_vendor_unlegacy,16,[1000002],"[1000002, 1000003]",['build/core/qcom_target.mk'],qcom_target: Also allow custom HAL paths for non-CAF devices,closed
@@ -348,7 +349,7 @@
 1000038,Unlegacy-Android/android_system_bt,2,[1000038],[1000038],['stack/sdp/sdp_server.c'],Decrease length after reading from array in process_service_attr_req,closed
 1000038,Unlegacy-Android/android_system_bt,8,[1000038],[1000038],['stack/smp/smp_br_main.c'],DO NOT MERGE SMP: Check p_cb->role in smp_br_state_machine_event,closed
 1000003,Unlegacy-Android/android_build,14,[1000002],[1000002],['stack/smp/smp_br_main.c'],Also support kernel modules in boot images,new
-1000003,Unlegacy-Android/android_build,14,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['stack/smp/smp_br_main.c'],Also support kernel modules in boot images,new
+1000003,Unlegacy-Android/android_build,14,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['stack/smp/smp_br_main.c'],Also support kernel modules in boot images,new
 1000003,Unlegacy-Android/android_build,4,[1000002],[1000002],['stack/smp/smp_br_main.c'],"Use ""rsync -a"" to copy over $(TARGET_ROOT_OUT) to $(TARGET_RECOVERY_OUT)",new
 1000003,Unlegacy-Android/android_build,34,[1000002],[1000002],['stack/smp/smp_br_main.c'],Move build-image-kernel-modules out of recovery macro,new
 1000003,Unlegacy-Android/android_build,3,[1000002],[1000002],['stack/smp/smp_br_main.c'],fix builds on macOS when kernel modules are used,new
@@ -366,12 +367,12 @@
 1000038,Unlegacy-Android/android_frameworks_base,10,[1000038],[1000038],['libs/androidfw/ResourceTypes.cpp'],Fix DynamicRefTable::load security bug,closed
 1000038,Unlegacy-Android/android_frameworks_base,4,[1000038],[1000038],['libs/androidfw/ResourceTypes.cpp'],ResStringPool: Prevenet boot loop from se fix,closed
 1000038,Unlegacy-Android/android_build,2,[1000038],[1000038],['core/version_defaults.mk'],Bump Security Patch Level to 2018-08-01,closed
-1000003,Unlegacy-Android/android_build_soong,6,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['core/version_defaults.mk'],variables: [TEMP] Add Cant_reallocate_omx_buffers,new
-1000003,Unlegacy-Android/android_build_soong,6,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['core/version_defaults.mk'],variables: [TEMP] Add Cant_reallocate_omx_buffers,new
+1000003,Unlegacy-Android/android_build_soong,6,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['core/version_defaults.mk'],variables: [TEMP] Add Cant_reallocate_omx_buffers,new
+1000003,Unlegacy-Android/android_build_soong,6,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['core/version_defaults.mk'],variables: [TEMP] Add Cant_reallocate_omx_buffers,new
 1000291,Unlegacy-Android/android_device_asus_grouper,4,[1000002],[1000002],['core/version_defaults.mk'],update ueventd.grouper.rc,new
 1000291,Unlegacy-Android/android_device_asus_grouper,290,[1000002],[1000002],['core/version_defaults.mk'],update to sensors api 1.3,new
 1000153,Unlegacy-Android/android_kernel_qcom_msm8960,6,[1000002],[1000002],['fs/sdcardfs/inode.c'],ANDROID: sdcardfs: fix potential crash when reserved_mb is not zero,closed
-1000003,Unlegacy-Android/android_vendor_unlegacy,5,"[1000002, 1000038, 1000037]","[1000002, 1000037, 1000038]",['fs/sdcardfs/inode.c'],soong_config: Add BOARD_CANT_REALLOCATE_OMX_BUFFERS,new
+1000003,Unlegacy-Android/android_vendor_unlegacy,5,"[1000002, 1000038, 1000037]","[1000002, 1000038, 1000037]",['fs/sdcardfs/inode.c'],soong_config: Add BOARD_CANT_REALLOCATE_OMX_BUFFERS,new
 1000002,Unlegacy-Android/android_device_samsung_tuna,237,[1000002],[1000002],"['device.mk', 'power/Android.mk', 'power/power_tuna.c']",Switch to the common OMAP4 power HAL,closed
 1000002,Unlegacy-Android/android_device_samsung_tuna,237,[1000002],[1000002],"['device.mk', 'power/Android.mk', 'power/power_tuna.c']",Switch to the common OMAP4 power HAL,closed
 1000003,Unlegacy-Android/android_hardware_ti_omap4,6,[1000002],"[1000002, 1000003, 1000037, 1000038]","['Android.mk', 'common.mk']",common: Ensure android-api.mk flags reach here,closed
@@ -420,7 +421,7 @@
 1000003,Unlegacy-Android/android,2,[],"[1000002, 1000003]",['unlegacy.xml'],"Revert ""Also fork hardware/interfaces""",closed
 1000003,Unlegacy-Android/android_system_nfc,87,[],"[1000002, 1000003]","['Android.bp', 'Android.mk']",bcm2079x: Switch back to more flexible Android.mk,closed
 1000003,Unlegacy-Android/android_system_nfc,4,[],"[1000002, 1000003]","['Android.mk', 'halimpl/bcm2079x/nfc_nci.c']",bcm2079x: Switch to NFC_NCI_HARDWARE_MODULE_ID,closed
-1000003,Unlegacy-Android/android_system_nfc,12,"[1000003, 1000002]","[1000002, 1000003]","['Android.mk', 'halimpl/bcm2079x/nfc_nci.c']",halimpl: Rename libnfc-brcm*.conf -> libnfc-nci*.conf,new
+1000003,Unlegacy-Android/android_system_nfc,12,"[1000003, 1000002]","[1000003, 1000002]","['Android.mk', 'halimpl/bcm2079x/nfc_nci.c']",halimpl: Rename libnfc-brcm*.conf -> libnfc-nci*.conf,new
 1000003,Unlegacy-Android/android_system_core,12,[],"[1000002, 1000003, 1000046]",['mkbootimg/mkbootimg'],mkbootimg: add support for --dt,closed
 1000046,Unlegacy-Android/android_hardware_qcom_display,6,[1000003],[1000003],['mkbootimg/mkbootimg'],msm8994: set -Wno-error globally for 8994 display.,new
 1000046,Unlegacy-Android/android_hardware_qcom_display,6,[1000003],[1000003],['mkbootimg/mkbootimg'],msm8994: use GCC's unused attribute to silence possible unused parameters,new
@@ -586,7 +587,7 @@
 1000002,Unlegacy-Android/android_device_samsung_tuna,6,[],[1000002],['rootdir/ueventd.tuna.rc'],ueventd: update graphics related permissions,closed
 1000038,Unlegacy-Android/android_device_samsung_espresso3g,9,[1000002],[1000002],['rilsrc/libsecril-client/secril-client.cpp'],libsecril-client: Fix RIL client token management in SendOemRequestHookRaw(),closed
 1000038,Unlegacy-Android/android_device_samsung_espresso3g,23,[1000002],[1000002],['rilsrc/libsecril-client/secril-client.cpp'],libsecril-client: close fds on I/O errors,closed
-1000153,Unlegacy-Android/android_build_soong,2,"[1000003, 1000002, 1000000]","[1000000, 1000002, 1000003]",['rilsrc/libsecril-client/secril-client.cpp'],soong: make host use native not prescott,new
+1000153,Unlegacy-Android/android_build_soong,2,"[1000003, 1000002, 1000000]","[1000003, 1000002, 1000000]",['rilsrc/libsecril-client/secril-client.cpp'],soong: make host use native not prescott,new
 1000037,Unlegacy-Android/android_hardware_ti_omap4,291,"[1000002, 1000048, 1000038]","[1000002, 1000037, 1000038, 1000048]","['camera/Android.mk', 'camera/AppCallbackNotifier.cpp', 'camera/Encoder_libjpeg.cpp', 'camera/NV12_resize.cpp', 'camera/inc/NV12_resize.h']",camera: Cleanup NV12 resize code.,closed
 1000218,Unlegacy-Android/android_kernel_nvidia_tegra3,119,[1000002],"[1000002, 1000218]","['drivers/video/tegra/host/bus_client.c', 'drivers/video/tegra/host/bus_client.h', 'drivers/video/tegra/host/host1x/host1x.c']",video: tegra: host: fix out-of-bound access in case of overflow,closed
 1000218,Unlegacy-Android/android_kernel_nvidia_tegra3,63,[1000002],"[1000002, 1000218]","['include/linux/mm.h', 'mm/util.c', 'security/apparmor/include/apparmor.h', 'security/apparmor/lib.c']",nick kvfree() from apparmor,closed
@@ -694,7 +695,7 @@
 1000153,Unlegacy-Android/android_hardware_qcom_power,13,[1000002],"[1000002, 1000003]","['Android.mk', 'power.c']",Fix low power mode support on msm8974,closed
 1000003,Unlegacy-Android/android_kernel_nvidia_tegra3,24,"[1000002, 1000223]","[1000002, 1000223]","['Android.mk', 'power.c']",defconfig: Add SELinux kconfig variant,new
 1000003,Unlegacy-Android/android_kernel_nvidia_tegra3,75,"[1000002, 1000223]","[1000002, 1000223]","['Android.mk', 'power.c']",kbuild: Variant defconfig support,new
-1000223,Unlegacy-Android/android_kernel_nvidia_tegra3,2251,"[1000003, 1000002, 1000000, 1000218, 1000153, 1000223]","[1000000, 1000002, 1000003, 1000153, 1000218, 1000223]","['Android.mk', 'power.c']",tegra3: Commonize selected defconfigs using kconfig variants,new
+1000223,Unlegacy-Android/android_kernel_nvidia_tegra3,2251,"[1000003, 1000002, 1000000, 1000218, 1000153, 1000223]","[1000003, 1000002, 1000000, 1000218, 1000153, 1000223]","['Android.mk', 'power.c']",tegra3: Commonize selected defconfigs using kconfig variants,new
 1000153,Unlegacy-Android/android_vendor_unlegacy,12,[1000002],[1000002],['overlay/common/frameworks/base/core/res/res/values/config.xml'],overlay: Enable auto-power-save modes globally,closed
 1000153,Unlegacy-Android/android_device_lge_mako,13,[1000002],"[1000002, 1000223]","['configs/gps.conf', 'overlay/frameworks/base/core/res/res/values/config.xml']",Move XTRA_SERVER entries to overlays,closed
 1000223,Unlegacy-Android/android_device_asus_flo,12,[1000002],[1000002],"['configs/gps.conf', 'overlay/frameworks/base/core/res/res/values/config.xml']",Move XTRA_SERVER entries to overlays,closed
@@ -720,7 +721,7 @@
 1000003,Unlegacy-Android/android_device_lge_hammerhead,2,[1000223],[1000223],['libs/androidfw/ResourceTypes.cpp'],device: Move bcmdhd.cal to TARGET_COPY_OUT_VENDOR,new
 1000003,Unlegacy-Android/android_device_lge_hammerhead,24,[1000223],[1000223],['libs/androidfw/ResourceTypes.cpp'],hammerhead: Switch to LOCAL_VENDOR_MODULE,new
 1000223,Unlegacy-Android/android_device_lge_hammerhead,174,[1000003],[1000003],['libs/androidfw/ResourceTypes.cpp'],hammerhead: Adapt to /vendor prebuilts,new
-1000003,Unlegacy-Android/android_hardware_broadcom_wlan,4,"[1000003, 1000002, 1000223]","[1000002, 1000003, 1000223]",['libs/androidfw/ResourceTypes.cpp'],config: Move supplicant overlays to TARGET_COPY_OUT_VENDOR,new
+1000003,Unlegacy-Android/android_hardware_broadcom_wlan,4,"[1000003, 1000002, 1000223]","[1000003, 1000002, 1000223]",['libs/androidfw/ResourceTypes.cpp'],config: Move supplicant overlays to TARGET_COPY_OUT_VENDOR,new
 1000003,Unlegacy-Android/android_hardware_qcom_gps,39,[1000003],"[1000003, 1000223]",['msm8974/loc_api/libloc_api_50001/loc_eng.cpp'],msm8974: Support moving conf files to /vendor/etc,closed
 1000223,Unlegacy-Android/android_device_asus_grouper,106,"[1000002, 1000223]","[1000002, 1000153, 1000223]","['audio/Android.mk', 'audio/audio_hw.c']",audio: fix warnings and build with -Wall -Werror,closed
 1000153,Unlegacy-Android/android_hardware_qcom_display,4,[1000003],[1000003],"['audio/Android.mk', 'audio/audio_hw.c']",msm8960: Set ioprio for vsync thread,new
@@ -788,7 +789,7 @@
 1000003,Unlegacy-Android/proprietary_vendor_qcom,0,[],"[1000002, 1000003, 1000046]","['msm8974/graphics/proprietary/vendor/lib/libRSDriver_adreno.so', 'msm8974/graphics/proprietary/vendor/lib/librs_adreno.so', 'msm8974/graphics/proprietary/vendor/lib/librs_adreno_sha1.so']",msm8974: Update Adreno RenderScript blobs,closed
 1000223,Unlegacy-Android/android_device_asus_deb,3,"[1000002, 1000223]","[1000002, 1000223]",['rootdir/fstab.deb'],fstab: add support for f2fs on /data,closed
 1000223,Unlegacy-Android/android_device_asus_deb,3,"[1000002, 1000223]","[1000002, 1000223]","['rootdir/fstab.deb', 'device.mk', 'kickstart_checker.sh', 'rootdir/init.deb.rc', 'sepolicy/file_contexts', 'sepolicy/kickstart.te']",fstab: add support for f2fs on /data,closed
-1000003,Unlegacy-Android/android_hardware_qcom_display,2,"[1000003, 1000002, 1000000, 1000046]","[1000000, 1000002, 1000003, 1000046]","['rootdir/fstab.deb', 'device.mk', 'kickstart_checker.sh', 'rootdir/init.deb.rc', 'sepolicy/file_contexts', 'sepolicy/kickstart.te']",bacon: [TEMP] Build msm8994 display HALs,new
+1000003,Unlegacy-Android/android_hardware_qcom_display,2,"[1000003, 1000002, 1000000, 1000046]","[1000003, 1000002, 1000000, 1000046]","['rootdir/fstab.deb', 'device.mk', 'kickstart_checker.sh', 'rootdir/init.deb.rc', 'sepolicy/file_contexts', 'sepolicy/kickstart.te']",bacon: [TEMP] Build msm8994 display HALs,new
 1000038,Unlegacy-Android/android,2,[1000038],[1000038],['android-security.xml'],manifest: fork device/common to patch CVE-2016-5341,closed
 1000038,Unlegacy-Android/android_device_oneplus_bacon,6,"[1000000, 1000046]","[1000000, 1000046]",['android-security.xml'],Xtra Patch - https,new
 1000038,Unlegacy-Android/android,2,[1000038],[1000038],['android-security.xml'],manifest: fork device/common to patch CVE-2016-5341,closed

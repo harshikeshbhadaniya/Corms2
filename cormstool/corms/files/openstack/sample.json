@@ -1,5 +1,0 @@
-{"author": "14200",
-"project": "openstack/kayobe",
-"files":[{"path":"ansible/ip-routing.yml"},{"path":"ansible/snat.yml"}],
-"subject":"Limit ip-routing and snat to seed hosts only"
-}

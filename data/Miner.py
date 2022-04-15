@@ -173,7 +173,7 @@ class Miner:
 
                 print("Shutting down executor without waiting")
                 executor.shutdown(wait=False)
-                print("Canceling running futures")
+                # print("Canceling running futures")
                 for future in future_to_url:
                     future.cancel()
 

@@ -16,7 +16,7 @@ def load_profiles(miner: Miner, sub_directory: str = "profile"):
 
 if __name__ == "__main__":
     # 1. Download change details status=Status.closed
-    miner = Miner(gerrit=Gerrit.onap, replace=False)
+    miner = Miner(gerrit=Gerrit.softwarefactory, replace=False)
 
     parameters = Parameters(status = '', start_index=0, end_index=-1,
                             after='2015-01-01 00:00:00.000000000',

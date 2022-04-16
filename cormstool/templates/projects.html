@@ -1,0 +1,53 @@
+<h1 class="display-6">SUPPORTED PROJECTS</h1>
+<h4 class="my-4"><b>CORMS</b> currenly provide tool support for following projects:</h4>
+<table id="table1" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Platform</th>
+            <th>Project</th>
+            <th>URL</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for data in project_supported %}
+    <tr>
+        <td></td>
+        <td>{{ data.platform }}</td>
+        <td>{{ data.project }}</td>
+        <td><a href="{{data.url}}" target="_blank">{{ data.url }}</a></td>
+        <td>{{ data.description }}</td>
+    </tr>
+    {% endfor %}          
+    </tbody>
+</table>
+<hr class="my-4 new">
+<h1 class="display-6">REQUESTED PROJECTS</h1>
+{% if project_requested %}
+<h4 class="my-4">The following projects are requested by users and currently under review:</h4>
+<table id="table2" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Platform</th>
+            <th>Project</th>
+            <th>URL</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for data in project_requested %}
+    <tr>
+        <td></td>
+        <td>{{ data.platform }}</td>
+        <td>{{ data.project }}</td>
+        <td><a href="{{data.url}}" target="_blank">{{ data.url }}</a></td>
+        <td>{{ data.description }}</td>
+    </tr>
+    {% endfor %}          
+    </tbody>
+</table>
+{% else %}
+<h4 class="my-4">No new request found! <a class="btn btn-primary" href="{% url 'add_project' %}">New Project Request</a></h4>
+{% endif %}

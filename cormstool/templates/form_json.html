@@ -1,0 +1,18 @@
+<form id="regForm" method="post" enctype="multipart/form-data" action="{% url 'results' %}">
+    {% csrf_token %}
+    <div class="tab">
+        <h3>Step 3/3: Upload JSON file</h3>
+        <input type="text" style="display:none" name="platform" value="{{platform}}" />
+        <input type="text" style="display:none" name="project" value="{{project}}" />
+        <hr class="newline">
+        <p><b>Format</b>: {"author": "author_id",
+          "project": "project/suproject information",
+          "files":[{"path":"file-path 1 info"},{"path":"file-path 2 info"}],
+          "subject":"subject of the change information"
+          }</p>
+          <p>If you have any issues with JSON, please refer our FAQs section at the end of the page</p>
+        <input style="width:50%" type="file" name="upload" accept=".JSON, .json" required>
+      </div>    
+      <br>
+    <button class="btn btn-primary" type="submit">Submit</button>  
+</form> 

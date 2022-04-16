@@ -16,7 +16,7 @@ def activeness(reviewer_activeness,plt):
     return rev_act
 
 def gerrit_act(project_h):
-    act_path = "cormstool/corms/files/"+project_h+"/reviewer_activeness.npy"
+    act_path = "data/"+project_h+"/reviewer_activeness.npy"
     reviewer_activeness = np.load(act_path,allow_pickle='TRUE').item()
     rev_act = activeness(reviewer_activeness,'gerrit')
     return rev_act

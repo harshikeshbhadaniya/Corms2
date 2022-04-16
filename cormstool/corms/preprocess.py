@@ -38,6 +38,6 @@ def process_gerrit(df,project):
     new_reviews = df.head(x)
     df = df.iloc[x: , :]
     df = df.reset_index(drop=True)
-    workload_path = "cormstool/corms/files/"+project+"/ongoing_workload.npy"
+    workload_path = "data/"+project+"/ongoing_workload.npy"
     workload = np.load(workload_path,allow_pickle='TRUE').item()
     return df,new_reviews,workload

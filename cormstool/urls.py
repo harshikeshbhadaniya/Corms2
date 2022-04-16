@@ -21,6 +21,13 @@ from django.conf import settings #add this
 from django.conf.urls.static import static #add this
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", views.upload, name="upload"),
+    path("", views.index, name="index"),
+    path("step/1/", views.step1, name="step1"),
+    path("step/2/", views.step2, name="step2"),
+    path("step/3/", views.step3, name="step3"),
+    path("results/", views.results, name="results"),
+    path("projects/", views.projects, name="projects"),
+    path("projects/add/", views.add_project, name="add_project"),
+    path("upload/", views.upload, name="upload"),
     path('download/<str:filename>', views.download_file, name="download_file")
 ]

@@ -1,0 +1,22 @@
+<form id="regForm" method="post" action="{% url 'projects' %}">
+    {% csrf_token %}
+    <h3>Submit New Project Request</h3>
+    <hr class="newline">
+    <label for="url">Platform:</label>
+    <input style="width:5%" type="radio" id="gerrit" checked name="platform" value="gerrit">
+    <label for="gerrit">Gerrit</label>
+    <input style="width:5%" type="radio" id="github" name="platform" value="github">
+    <label for="github">GitHub</label>
+    <br>
+    <label for="project">Name:</label>
+    <input type="text" id="project" name="project" required placeholder="Enter Project Name">
+    <br>
+    <label for="url">URL:</label>
+    <input type="text" id="url" name="url" required placeholder="Enter Project URL">
+    <br>
+    <label for="url">Description:</label>
+    <textarea id="desc" name="desc" rows="4" style="width:100%" placeholder="Enter Project Description"></textarea>
+    <hr class="newline">
+    <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+    

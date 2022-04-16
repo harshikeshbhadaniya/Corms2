@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include "headers.html" %}
+  <body>
+    {% include "navbar.html" %}
+    <div class="jumbotron">
+      {% include "notification.html" %}
+      {% if results %}
+        {% include "results.html" %}
+        <hr class="my-4 new">
+        <h1 class="display-6">FILTERS</h1>
+        {% if inactive %}
+          {% include "results.html" %}
+        {% else %}
+          <p class="my-4">No inactive reviewers found.</p>
+        {% endif %}
+      {% endif %}
+      {% if results %}
+        <hr class="my-4 new">
+        <h1 class="display-6">FEEDBACK</h1>
+        {% include "form_feedback.html" %}
+      {% endif %}
+      {% include "faq.html" %}
+    </div>
+    {% include "scripts.html" %}
+    <script>
+      $(document).ready(function() {
+      var t1 = $('#table1').DataTable({"ordering": true,"lengthChange":false,"searching": true,"info": false,
+      "paging":true,
+        dom: 'Bfrtip',
+        buttons: [
+              'copy', 'csv', 'excel', 'pdf', 'print'
+        ],
+        "columnDefs": [ {
+            "searchable": false,
+            "orderable": false,
+            "targets": 0
+        } ],
+        "order": [[ 1, 'desc' ]]  
+      });
+      t1.on( 'order.dt search.dt', function () {
+          let i = 1;
+  
+          t1.cells(null, 0, {search:'applied', order:'applied'}).every( function (cell) {
+              this.data(i++);
+          } );
+      } ).draw();
+      var t2 = $('#table2').DataTable({
+        "columnDefs": [ {
+            "searchable": false,
+            "orderable": false,
+            "targets": 0
+        } ],
+          "order": [[ 1, 'desc' ]]
+      });
+      t2.on( 'order.dt search.dt', function () {
+          let i = 1;
+  
+          t2.cells(null, 0, {search:'applied', order:'applied'}).every( function (cell) {
+              this.data(i++);
+          } );
+      } ).draw();
+    });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include "headers.html" %}
+  <body>
+    {% include "navbar.html" %}
+    <div class="jumbotron">
+      {% include "notification.html" %}
+      {% include "projects.html" %}
+      {% include "faq.html" %}
+    </div>
+    {% include "scripts.html" %}
+    <script>
+      $(document).ready(function() {
+      var t1 = $('#table1').DataTable({
+        "columnDefs": [ {
+            "searchable": false,
+            "orderable": false,
+            "targets": 0
+        } ],
+          "order": [[ 1, 'asc' ]],
+          "responsive":true
+      });
+      t1.on( 'order.dt search.dt', function () {
+          let i = 1;
+  
+          t1.cells(null, 0, {search:'applied', order:'applied'}).every( function (cell) {
+              this.data(i++);
+          } );
+      } ).draw();
+      var t2 = $('#table2').DataTable({
+        "columnDefs": [ {
+            "searchable": false,
+            "orderable": false,
+            "targets": 0
+        } ],
+          "order": [[ 1, 'asc' ]],
+          "responsive":true 
+      });
+      t2.on( 'order.dt search.dt', function () {
+          let i = 1;
+  
+          t2.cells(null, 0, {search:'applied', order:'applied'}).every( function (cell) {
+              this.data(i++);
+          } );
+      } ).draw();
+    });
+      </script>
+  </body>
+</html>

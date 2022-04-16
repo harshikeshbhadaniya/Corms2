@@ -11,15 +11,17 @@ from cormstool.corms.clean import text_cleaning
 import pandas as pd
 import numpy as np
 
-def main_controller(f,project_h,platform):
-  proj_csv = "data/"+project_h+"/corms_"+project_h+".csv"
-  if(platform=="gerrit"):
-    header_list = ["Author", "Project/Subproject","Reviewer","Change_Size","File Info","Subject","Status"]
-    df = pd.read_csv(proj_csv, names=header_list,sep=";",encoding="unicode_escape",skiprows=[0])
-  else:
-    header_list = ["Author","Project/Subproject","Reviewer","Change_Size","File Info","Subject","Closed At","status"]
-    df = pd.read_csv(proj_csv, names=header_list, sep=';', encoding= 'unicode_escape',skiprows=[0])
-    
+def main_controller(f,project_h,platform,db):
+  # proj_csv = "data/"+project_h+"/corms_"+project_h+".csv"
+  proj_csv = "corms_"+project_h
+  collection = db[proj_csv]
+  # if(platform=="gerrit"):
+  #   header_list = ["Author", "Project/Subproject","Reviewer","Change_Size","File Info","Subject","Status"]
+  #   df = pd.read_csv(proj_csv, names=header_list,sep=";",encoding="unicode_escape",skiprows=[0])
+  # else:
+  #   header_list = ["Author","Project/Subproject","Reviewer","Change_Size","File Info","Subject","Closed At","status"]
+  #   df = pd.read_csv(proj_csv, names=header_list, sep=';', encoding= 'unicode_escape',skiprows=[0])
+  df = pd.DataFrame(list(collection.find()))  
   if(platform=="gerrit"):
     df,new_reviews,workload = process.process_gerrit(df,project_h)
     rev_act = active.gerrit_act(project_h)
@@ -64,20 +66,16 @@ def main_controller(f,project_h,platform):
       break
     
   rev = []
-  i=0
   for key in ls:
-    i=i+1
-    rev.append(findrev(str(key),project_h,rev_act,i,final_score[key],workload))
+    rev.append(findrev(str(key),project_h,rev_act,final_score[key],workload))
   
   inrev = []
-  i=0
   for key in inactive:
-    i=i+1
-    inrev.append(findrev(str(key),project_h,rev_act,i,inactive[key],workload))
-  return rev,platform,project_h,inrev
+    inrev.append(findrev(str(key),project_h,rev_act,inactive[key],workload))
+  return rev,inrev
 
-def findrev(number,project,rev_act,i,score,workload):
-    csv_path = "cormstool/corms/files/"+project+"/fp_"+project+".csv"
+def findrev(number,project,rev_act,score,workload):
+    csv_path = "data/"+project+"/fp_"+project+".csv"
     csv_file = csv.reader(open(csv_path, "r", encoding='utf-8'), delimiter=",")
     #loop through the csv list
     for row in csv_file:
@@ -91,7 +89,7 @@ def findrev(number,project,rev_act,i,score,workload):
             work = str(workload[int(row[0])])
           else:
             work = "-"
-          return [i,round(score*100,2),row[0],row[1],act,work]
+          return [round(score*100,2),row[0],row[1],act,work]
     # return [str(number),"-","-","-"]
 
 #url = "http://review.openstack.org/accounts/14826/detail"

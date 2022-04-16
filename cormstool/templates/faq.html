@@ -15,42 +15,8 @@
 </button>
 <div class="collapse" id="c2">
 <div class="card card-body">
-    <p>1. Add your Gerrit or GitHub project by just giving the <b>project url</b> information: <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addProject">Add Project</button></p>
+    <p>1. Add your Gerrit or GitHub project by just giving the <b>project url</b> information: <a href="{% url 'add_project' %}" type="_blank" type="button" class="btn btn-primary">Add Project</a></p>
     <p>2. Our system will fetch recent reviews of this project and will add it in the corms supported projects.</p>
     <p>(This process may take around 1 week depending upon the availability and testing of new data)</p>
 </div>
 </div>
-
-<!-- Modal -->
-<div class="modal fade" id="addProject" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <form id="proForm" method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Add New Project</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <label for="url">Platform:</label>
-            <input style="width:5%" type="radio" id="gerrit" checked name="platform" value="gerrit">
-            <label for="gerrit">Gerrit</label>
-            <input style="width:5%" type="radio" id="github" name="platform" value="github">
-            <label for="github">GitHub</label>
-            <br>
-            <label for="project">Name:</label>
-            <input type="text" id="project" name="project" required placeholder="Enter Project Name">
-            <br>
-            <label for="url">URL:</label>
-            <input type="text" id="url" name="url" required placeholder="Enter Project URL">
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary">Add Project</button>
-        </div>
-        </form>
-      </div>
-    </div>
-  </div>

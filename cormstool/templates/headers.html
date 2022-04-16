@@ -2,25 +2,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
-
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css">
+    
     <style>
-      /* body{
-        font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace; */
-      /* } */
-    .panel-heading .colpsible-panel:after {
-    font-family: 'Glyphicons Halflings';
-    content: "\e114";   
-    float: right;       
-    color: #408080;        
-    }
-    .panel-heading .colpsible-panel.collapsed:after {
-    content: "\e080";
-    }
+    
     .jumbotron{
       margin-bottom:0;
     }
@@ -33,7 +22,6 @@
     width: 100%;
     min-width: 300px;
     }
-
     /* Style the input fields */
     input {
     padding: 10px;
@@ -47,29 +35,13 @@
     input.invalid {
     background-color: #ffdddd;
     }
-
-    /* Hide all steps by default: */
-    .tab {
-    display: none;
-    }
     h1{
     font-weight: 600;
     }
-    /* Make circles that indicate the steps of the form: */
-    .step {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbbbbb;
-    border: none;
-    border-radius: 50%;
-    display: inline-block;
-    opacity: 0.5;
-    }
-
-    /* Mark the active step: */
-    .step.active {
-    opacity: 1;
+    @media only screen and (max-width: 600px) {
+      h1{
+      font-size:8vw;
+      }
     }
     form,.dataTables_wrapper{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -91,9 +63,6 @@
     border: 1px solid #8c8b8b; 
     }  */
     /* Mark the steps that are finished and valid: */
-    .step.finish {
-    background-color: #04AA6D;
-    }
     .btn-my{
       background-color: #ffffff;
       padding: 20px;

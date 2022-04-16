@@ -1,0 +1,17 @@
+<form id="regForm" method="post" action="{% url 'step3' %}">
+    {% csrf_token %}
+    <div class="tab">
+        <h3>Step 2/3: Select Project</h3>
+        <hr class="newline">
+        <p>Currently we are providing recommendations based on following <b>{{platform}}</b> projects: </p>
+        <input type="text" style="display:none" name="platform" value="{{platform}}" />
+        <label for="project">Choose project:</label>
+        <select name="project" id="project" required> 
+            {% for data in proj_details %}
+                <option>{{data.project}}</option>
+            {%endfor%}
+        </select> 
+    </div> 
+    <br>
+    <button class="btn btn-primary" type="submit">Next</button>  
+</form> 

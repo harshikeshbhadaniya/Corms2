@@ -159,7 +159,7 @@ def download_file(request,filename=''):
         # Define Django project base directory
         BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         # Define the full file path
-        filepath = BASE_DIR + '/cormstool/corms/files/' + filename
+        filepath = BASE_DIR + '/data/' + filename
         # Open the file for reading content
         path = open(filepath, 'rb')
         # Set the mime type
